@@ -6,7 +6,7 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:18:59 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/02 16:06:54 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/02 17:14:38 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Dog::Dog(void)
 	std::cout << "Dog default Constructor called" << std::endl;
 	this->Animal::type = "Dog";
 	this->type = "Default";
+	this->brain = new Brain;
 }
 
 Dog::Dog(std::string type)
@@ -26,6 +27,7 @@ Dog::Dog(std::string type)
 	std::cout << "Dog Constructor with name attribute called" << std::endl;
 	this->Animal::type = "Dog";
 	this->type = type;
+	this->brain = new Brain;
 }
 
 Dog::Dog(Dog const &cpy)
@@ -39,6 +41,7 @@ Dog::Dog(Dog const &cpy)
 Dog::~Dog(void)
 {
 	std::cout << "Dog default Destructor called" << std::endl;
+	delete this->brain;
 }
 
 // Operators

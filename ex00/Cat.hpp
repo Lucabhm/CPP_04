@@ -6,7 +6,7 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:07 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/30 16:17:53 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/02 15:58:17 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 
 class Cat: public Animal
 {
+	private:
+		std::string	type;
 	public:
 		Cat(void);
 		Cat(std::string type);

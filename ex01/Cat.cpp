@@ -6,7 +6,7 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:09 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/02 15:59:54 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/02 17:15:18 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Cat::Cat(void)
 	std::cout << "Cat default Constructor called" << std::endl;
 	this->Animal::type = "Cat";
 	this->type = "Default";
+	this->brain = new Brain;
 }
 
 Cat::Cat(std::string type)
@@ -26,6 +27,7 @@ Cat::Cat(std::string type)
 	std::cout << "Cat Constructor with name attribute called" << std::endl;
 	this->Animal::type = "Cat";
 	this->type = type;
+	this->brain = new Brain;
 }
 
 Cat::Cat(Cat const &cpy)
@@ -39,6 +41,7 @@ Cat::Cat(Cat const &cpy)
 Cat::~Cat(void)
 {
 	std::cout << "Cat default Destructor called" << std::endl;
+	delete this->brain;
 }
 
 // Operators
