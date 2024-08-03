@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/02 17:04:02 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/02 17:28:55 by lbohm            ###   ########.fr       */
+/*   Created: 2024/08/03 16:44:32 by lbohm             #+#    #+#             */
+/*   Updated: 2024/08/03 16:59:29 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-# include <string>
 # include <iostream>
+# include <string>
+# include "WrongAnimal.hpp"
 
-class Brain
+class	WrongCat : public WrongAnimal
 {
 	private:
-		std::string	ideas[100];
+		std::string	type;
 	public:
-		Brain(void);
-		Brain(Brain const &cpy);
-		~Brain(void);
-		Brain	&operator= (Brain const &cpy);
-		void	setIdeas(std::string const &ideas);
+		WrongCat(void);
+		WrongCat(std::string type);
+		WrongCat(WrongCat const &cpy);
+		~WrongCat(void);
+		WrongCat	&operator= (WrongCat const &cpy);
+		void	makeSound(void) const;
 };
-
 
 #endif

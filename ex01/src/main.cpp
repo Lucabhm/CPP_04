@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/30 15:19:12 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/02 16:05:51 by lbohm            ###   ########.fr       */
+/*   Created: 2024/07/30 15:19:01 by lbohm             #+#    #+#             */
+/*   Updated: 2024/08/03 17:37:49 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#include "../include/Cat.hpp"
+#include "../include/Dog.hpp"
 
-# include "Animal.hpp"
-
-class Dog: public Animal
+int main()
 {
-	private:
-		std::string	type;
-	public:
-		Dog(void);
-		Dog(std::string type);
-		Dog(Dog const &cpy);
-		~Dog(void);
-		Dog	&operator= (Dog const &cpy);
-		void	makeSound(void) const;
-};
+	Animal	*test[2];
 
-#endif
+	for (int i = 0; i < 1; i++)
+		test[i] = new Cat;
+	for (int i = 1; i < 2; i++)
+		test[i] = new Dog;
+	for (int i = 0; i < 2; i++)
+		delete	test[i];
+	return (0);
+}

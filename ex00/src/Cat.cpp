@@ -6,11 +6,11 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:09 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/02 15:59:54 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/03 17:22:38 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "../include/Cat.hpp"
 
 // Constructor
 
@@ -47,7 +47,10 @@ Cat	&Cat::operator= (Cat const &cpy)
 {
 	std::cout << "Cat copy assignment operator called" << std::endl;
 	if (this != &cpy)
+	{
+		this->Animal::type = cpy.Animal::type;
 		this->type = cpy.type;
+	}
 	return (*this);
 }
 

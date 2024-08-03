@@ -6,11 +6,11 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:09 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/02 17:15:18 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/03 17:25:36 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "../include/Cat.hpp"
 
 // Constructor
 
@@ -19,7 +19,7 @@ Cat::Cat(void)
 	std::cout << "Cat default Constructor called" << std::endl;
 	this->Animal::type = "Cat";
 	this->type = "Default";
-	this->brain = new Brain;
+	this->CatBrain = new Brain;
 }
 
 Cat::Cat(std::string type)
@@ -27,7 +27,7 @@ Cat::Cat(std::string type)
 	std::cout << "Cat Constructor with name attribute called" << std::endl;
 	this->Animal::type = "Cat";
 	this->type = type;
-	this->brain = new Brain;
+	this->CatBrain = new Brain;
 }
 
 Cat::Cat(Cat const &cpy)
@@ -41,7 +41,7 @@ Cat::Cat(Cat const &cpy)
 Cat::~Cat(void)
 {
 	std::cout << "Cat default Destructor called" << std::endl;
-	delete this->brain;
+	delete	this->CatBrain;
 }
 
 // Operators
@@ -50,7 +50,10 @@ Cat	&Cat::operator= (Cat const &cpy)
 {
 	std::cout << "Cat copy assignment operator called" << std::endl;
 	if (this != &cpy)
+	{
+		this->Animal::type = cpy.Animal::type;
 		this->type = cpy.type;
+	}
 	return (*this);
 }
 

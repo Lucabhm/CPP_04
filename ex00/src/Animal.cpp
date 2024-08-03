@@ -6,11 +6,11 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:05 by lbohm             #+#    #+#             */
-/*   Updated: 2024/07/30 16:23:15 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/03 17:22:22 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "../include/Animal.hpp"
 
 // Constructor
 

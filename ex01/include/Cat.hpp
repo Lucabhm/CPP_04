@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/30 15:19:01 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/02 17:45:25 by lbohm            ###   ########.fr       */
+/*   Created: 2024/07/30 15:19:07 by lbohm             #+#    #+#             */
+/*   Updated: 2024/08/03 17:13:47 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
+#ifndef CAT_HPP
+# define CAT_HPP
 
-int main()
+# include "Animal.hpp"
+# include "Brain.hpp"
+
+class Cat: public Animal
 {
-	const Animal	*j = new Dog[5];
-	const Animal	*i = new Cat[5];
+	private:
+		std::string	type;
+		Brain	*CatBrain;
+	public:
+		Cat(void);
+		Cat(std::string type);
+		Cat(Cat const &cpy);
+		~Cat(void);
+		Cat	&operator= (Cat const &cpy);
+		void	makeSound(void) const;
+};
 
-	for (int i = 0; i < 8; i++)
-	{
-		
-	}
-	delete[] j;
-	delete[] i;
-	return 0;
-}
+#endif

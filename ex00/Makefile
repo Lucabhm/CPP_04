@@ -1,10 +1,13 @@
 NAME = animal
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
+VPATH = src
 SRCS = main.cpp \
 		Animal.cpp \
 		Cat.cpp \
-		Dog.cpp
+		Dog.cpp \
+		WrongAnimal.cpp \
+		WrongCat.cpp
 OBJSDIR = objs/
 OBJS = $(addprefix $(OBJSDIR), $(SRCS:.cpp=.o))
 

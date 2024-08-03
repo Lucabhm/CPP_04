@@ -6,11 +6,11 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 17:07:28 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/02 17:28:49 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/03 17:25:34 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
+#include "../include/Brain.hpp"
 
 // Constructor
 
@@ -51,4 +51,14 @@ void	Brain::setIdeas(std::string const &ideas)
 {
 	for (int i = 0; i < 100; i++)
 		this->ideas[i] = ideas[i];
+}
+
+void	Brain::printIdeas(void)
+{
+	for (int i = 0; i < 100; i++)
+	{
+		if (ideas[i].empty())
+			break ;
+		std::cout << "ideas = " << ideas[i] << std::endl;
+	}
 }
