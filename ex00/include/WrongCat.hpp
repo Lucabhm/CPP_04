@@ -6,15 +6,13 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:44:32 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/03 16:59:29 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/05 10:27:13 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRONGCAT_HPP
 # define WRONGCAT_HPP
 
-# include <iostream>
-# include <string>
 # include "WrongAnimal.hpp"
 
 class	WrongCat : public WrongAnimal

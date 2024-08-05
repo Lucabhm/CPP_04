@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/03 16:56:06 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/05 10:27:03 by lbohm            ###   ########.fr       */
+/*   Created: 2024/08/02 17:04:02 by lbohm             #+#    #+#             */
+/*   Updated: 2024/08/03 15:51:24 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-# include <iostream>
 # include <string>
+# include <iostream>
 
-class	WrongAnimal
+class Brain
 {
-	protected:
-		std::string	type;
+	private:
+		std::string	ideas[100];
 	public:
-		WrongAnimal(void);
-		WrongAnimal(std::string type);
-		WrongAnimal(WrongAnimal const &cpy);
-		~WrongAnimal(void);
-		WrongAnimal	&operator= (WrongAnimal const &cpy);
-		std::string	getType(void) const;
-		void	setType(std::string type);
-		void	makeSound(void) const;
+		Brain(void);
+		Brain(Brain const &cpy);
+		~Brain(void);
+		Brain	&operator= (Brain const &cpy);
+		void	setIdeas(std::string const &ideas);
+		void	printIdeas(void);
 };
+
 
 #endif

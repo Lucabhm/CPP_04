@@ -6,16 +6,50 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:01 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/05 09:40:54 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/05 09:51:06 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Cat.hpp"
 #include "../include/Dog.hpp"
+#include "../include/WrongAnimal.hpp"
+#include "../include/WrongCat.hpp"
 
 int main()
 {
+	std::cout << std::endl;
+	std::cout << "Test 1" << std::endl << std::endl;
+
 	Animal	*animals[2];
+	const Animal* j = new Dog("Fia");
+	const Animal* i = new Cat("Gerry");
+
+
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound(); //will output the cat sound!
+	j->makeSound();
+	delete j;
+	delete i;
+
+	std::cout << std::endl;
+	std::cout << "Wrong output" << std::endl << std::endl;
+
+	const WrongAnimal* wrongMeta = new WrongAnimal();
+	const WrongAnimal* k = new WrongCat("Fia");
+	const WrongAnimal* l = new WrongCat("Gerry");
+
+	std::cout << k->getType() << " " << std::endl;
+	std::cout << l->getType() << " " << std::endl;
+	l->makeSound(); //will output the cat sound!
+	k->makeSound();
+	wrongMeta->makeSound();
+	delete wrongMeta;
+	delete k;
+	delete l;
+
+	std::cout << std::endl;
+	std::cout << "Test 2" << std::endl << std::endl;
 
 	for (int i = 0; i < 1; i++)
 		animals[i] = new Cat;
