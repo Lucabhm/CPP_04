@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 10:37:24 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/05 14:04:52 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/05 21:50:38 by lucabohn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,7 @@ Ice	&Ice::operator= (Ice const &cpy)
 {
 	std::cout << "Ice copy assignment operator called" << std::endl;
 	if (this != &cpy)
-	{
-		
-	}
+		std::cout << "Noting needs to copy" << std::endl;
 	return (*this);
 }
 
@@ -50,8 +48,7 @@ Ice	&Ice::operator= (Ice const &cpy)
 AMateria	*Ice::clone(void) const
 {
 	AMateria	*ret = new Ice;
-	
-	*ret = *this;
+
 	return (ret);
 }
 

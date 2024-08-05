@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 11:34:20 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/05 14:35:52 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/05 21:31:16 by lucabohn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class	Character : public	ICharacter
 	private:
 		std::string	name;
 		AMateria	*inventory[4];
+		int	slot;
 	public:
 		Character(void);
 		Character(std::string name);

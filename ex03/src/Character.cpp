@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 12:55:22 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/05 14:01:32 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/05 21:57:31 by lucabohn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,11 @@ Character	&Character::operator= (Character const &cpy)
 	{
 		this->name = cpy.name;
 		for (int i = 0; i < 4; i++)
+		{
+			if (this->inventory[i])
+				delete this->inventory[i];
 			this->inventory[i] = cpy.inventory[i];
+		}
 	}
 	return (*this);
 }
@@ -73,6 +77,11 @@ void	Character::equip(AMateria *m)
 
 	if (i < 4)
 	{
+		for (int i = 0; i < 4; i++)
+		{
+			if (this->inventory[i] == m)
+				return ;
+		}
 		this->inventory[i] = m;
 		i++;
 	}
@@ -80,10 +89,19 @@ void	Character::equip(AMateria *m)
 
 void	Character::unequip(int idx)
 {
-	this->inventory[idx] = NULL;
+	if (idx < 4)
+	{
+		if (this->inventory[idx])
+			delete this->inventory[idx];
+		this->inventory[idx] = NULL;
+	}
 }
 
 void	Character::use(int idx, ICharacter &target)
 {
-	this->inventory[idx]->use(target);
+	if (idx < 4)
+	{
+		if (this->inventory[idx])
+			this->inventory[idx]->use(target);
+	}
 }

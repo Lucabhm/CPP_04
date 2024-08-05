@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 11:35:04 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/05 16:30:34 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/05 21:35:33 by lucabohn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,11 @@ MateriaSource	&MateriaSource::operator= (MateriaSource const &cpy)
 	if (this != &cpy)
 	{
 		for (int i = 0; i < 4; i++)
+		{
+			if (this->invertory[i])
+				delete this->invertory[i];
 			this->invertory[i] = cpy.invertory[i];
+		}
 	}
 	return (*this);
 }

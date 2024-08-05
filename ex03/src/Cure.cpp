@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 10:37:21 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/05 12:47:31 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/05 21:50:45 by lucabohn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,7 @@ Cure	&Cure::operator= (Cure const &cpy)
 {
 	std::cout << "Cure copy assignment operator called" << std::endl;
 	if (this != &cpy)
-	{
-
-	}
+		std::cout << "Nothing need to copy" << std::endl;
 	return (*this);
 }
 
@@ -51,7 +49,6 @@ AMateria	*Cure::clone(void) const
 {
 	AMateria	*ret = new Cure;
 
-	*ret = *this;
 	return (ret);
 }
 
