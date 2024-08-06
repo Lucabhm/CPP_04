@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:09 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/03 17:25:36 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 08:41:36 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,9 @@ Cat	&Cat::operator= (Cat const &cpy)
 void	Cat::makeSound(void) const
 {
 	std::cout << "Cat with the name " << type << " starts Meowing" << std::endl;
+}
+
+void	Cat::printBrain(void) const
+{
+	CatBrain->printIdeas();
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:05 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/03 17:25:23 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 08:40:18 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,3 +61,8 @@ void	Animal::setType(std::string type)
 }
 
 void	Animal::makeSound(void) const {}
+
+void	Animal::printBrain(void) const
+{
+	std::cout << "Do nothing" << std::endl;
+}

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:01 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/03 17:34:42 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 07:57:21 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog("Fia");
-	const Animal* i = new Cat("Gerry");
+	const Animal	*meta = new Animal();
+	const Animal	*j = new Dog("Fia");
+	const Animal	*i = new Cat("Gerry");
 
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;

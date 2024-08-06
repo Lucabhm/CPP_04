@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:55:49 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/03 17:22:57 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 07:52:01 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,6 @@ WrongAnimal::WrongAnimal(void)
 {
 	std::cout << "WrongAnimal default Constructor called" << std::endl;
 	this->type = "Animal";
-}
-
-WrongAnimal::WrongAnimal(std::string type)
-{
-	std::cout << "WrongAnimal Constructor with name attribute called" << std::endl;
-	this->type = type;
 }
 
 WrongAnimal::WrongAnimal(WrongAnimal const &cpy)
@@ -55,10 +49,6 @@ WrongAnimal	&WrongAnimal::operator= (WrongAnimal const &cpy)
 
 std::string	WrongAnimal::getType(void) const {return (this->type);}
 
-void	WrongAnimal::setType(std::string type)
-{
-	this->type = type;
-}
 
 void	WrongAnimal::makeSound(void) const
 {

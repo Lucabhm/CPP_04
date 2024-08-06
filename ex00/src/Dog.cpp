@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:18:59 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/03 17:22:47 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 07:51:33 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ Dog	&Dog::operator= (Dog const &cpy)
 	std::cout << "Dog copy assignemt operator called" << std::endl;
 	if (this != &cpy)
 	{
+		this->Animal::type = cpy.Animal::type;
 		this->type = cpy.type;
 	}
 	return (*this);

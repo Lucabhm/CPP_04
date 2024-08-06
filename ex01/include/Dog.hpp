@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:12 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/03 17:13:23 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 08:46:41 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Dog: public Animal
 		~Dog(void);
 		Dog	&operator= (Dog const &cpy);
 		void	makeSound(void) const;
+		void	printBrain(void) const;
 };
 
 #endif

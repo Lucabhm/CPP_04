@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:18:59 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/03 17:25:39 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 08:53:15 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,9 @@ Dog	&Dog::operator= (Dog const &cpy)
 void	Dog::makeSound(void) const
 {
 	std::cout << "Dog with the name " << this->type << " starts barking" << std::endl;
+}
+
+void	Dog::printBrain(void) const
+{
+	DogBrain->printIdeas();
 }

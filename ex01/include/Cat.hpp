@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:07 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/03 17:13:47 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 08:40:43 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Cat: public Animal
 		~Cat(void);
 		Cat	&operator= (Cat const &cpy);
 		void	makeSound(void) const;
+		void	printBrain(void) const;
 };
 
 #endif

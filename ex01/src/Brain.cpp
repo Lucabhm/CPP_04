@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 17:07:28 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/03 17:25:34 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 08:38:33 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 Brain::Brain(void)
 {
 	std::cout << "Brain default Constructor called" << std::endl;
+	ideas[0] = "eat";
+	ideas[1] = "sleep";
+	ideas[2] = "repeat";
 }
 
 Brain::Brain(Brain const &cpy)
@@ -46,12 +49,6 @@ Brain	&Brain::operator= (Brain const &cpy)
 }
 
 // Member functions
-
-void	Brain::setIdeas(std::string const &ideas)
-{
-	for (int i = 0; i < 100; i++)
-		this->ideas[i] = ideas[i];
-}
 
 void	Brain::printIdeas(void)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:56:06 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/05 10:27:03 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 07:52:12 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,10 @@ class	WrongAnimal
 		std::string	type;
 	public:
 		WrongAnimal(void);
-		WrongAnimal(std::string type);
 		WrongAnimal(WrongAnimal const &cpy);
 		~WrongAnimal(void);
 		WrongAnimal	&operator= (WrongAnimal const &cpy);
 		std::string	getType(void) const;
-		void	setType(std::string type);
 		void	makeSound(void) const;
 };
 
