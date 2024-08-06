@@ -6,7 +6,7 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:03 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/05 09:44:46 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 16:01:32 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,12 @@ class Animal
 		std::string	type;
 	public:
 		Animal(void);
-		Animal(std::string type);
 		Animal(Animal const &cpy);
 		virtual ~Animal(void);
 		Animal	&operator= (Animal const &cpy);
 		std::string	getType(void) const;
-		void	setType(std::string type);
 		virtual void	makeSound(void) const = 0;
+		virtual void	printBrain(void) const = 0;
 };
 
 #endif

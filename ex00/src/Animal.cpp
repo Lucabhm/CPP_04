@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:05 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/06 07:49:41 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 15:38:58 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,7 @@ Animal	&Animal::operator= (Animal const &cpy)
 {
 	std::cout << "Animal copy assignment operator called" << std::endl;
 	if (this != &cpy)
-	{
 		this->type = cpy.type;
-	}
 	return (*this);
 }
 

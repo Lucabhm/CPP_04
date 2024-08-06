@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 10:24:44 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/05 21:59:31 by lucabohn         ###   ########.fr       */
+/*   Updated: 2024/08/06 15:31:50 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int main(void)
 	ICharacter	*bob = new Character("bob");
 	me->use(0, *bob);
 	me->use(1, *bob);
-	delete bob;
 	delete me;
+	delete bob;
 	delete src;
 	return (0);
 }

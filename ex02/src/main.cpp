@@ -6,7 +6,7 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:01 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/05 09:51:06 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 16:05:19 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int main()
 	std::cout << "Test 1" << std::endl << std::endl;
 
 	Animal	*animals[2];
-	const Animal* j = new Dog("Fia");
-	const Animal* i = new Cat("Gerry");
+	const Animal	*j = new Dog("Fia");
+	const Animal	*i = new Cat("Gerry");
 
 
 	std::cout << j->getType() << " " << std::endl;
@@ -55,6 +55,8 @@ int main()
 		animals[i] = new Cat;
 	for (int i = 1; i < 2; i++)
 		animals[i] = new Dog;
+	for (int i = 0; i < 2; i ++)
+		animals[i]->printBrain();
 	for (int i = 0; i < 2; i++)
 		delete	animals[i];
 	return (0);

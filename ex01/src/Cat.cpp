@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:09 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/06 08:41:36 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 15:35:27 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@ Cat::Cat(std::string type)
 Cat::Cat(Cat const &cpy)
 {
 	std::cout << "Cat copy Constructor called" << std::endl;
-	*this = cpy;
+	this->Animal::type = cpy.Animal::type;
+	this->type = cpy.type;
+	this->CatBrain = new Brain(*cpy.CatBrain);
 }
 
 // Destructor
@@ -53,6 +55,9 @@ Cat	&Cat::operator= (Cat const &cpy)
 	{
 		this->Animal::type = cpy.Animal::type;
 		this->type = cpy.type;
+		if (this->CatBrain)
+			delete this->CatBrain;
+		this->CatBrain = new Brain(*cpy.CatBrain);
 	}
 	return (*this);
 }

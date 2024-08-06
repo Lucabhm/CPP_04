@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 12:55:22 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/05 21:57:31 by lucabohn         ###   ########.fr       */
+/*   Updated: 2024/08/06 17:22:20 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Character.hpp"
 #include "../include/AMateria.hpp"
+#include "../include/Ice.hpp"
 
 // Constructor
 
@@ -34,7 +35,14 @@ Character::Character(std::string name)
 Character::Character(Character const &cpy)
 {
 	std::cout << "Character copy Constructor called" << std::endl;
-	*this = cpy;
+	this->name = cpy.name;
+	for (int i = 0; i < 4; i++)
+	{
+		if (cpy.inventory[i])
+			this->inventory[i] = cpy.inventory[i]->clone();
+		else
+			this->inventory[i] = NULL;
+	}
 }
 
 // Destructor
@@ -60,8 +68,12 @@ Character	&Character::operator= (Character const &cpy)
 		for (int i = 0; i < 4; i++)
 		{
 			if (this->inventory[i])
+			{
 				delete this->inventory[i];
-			this->inventory[i] = cpy.inventory[i];
+				this->inventory[i] = cpy.inventory[i]->clone();
+			}
+			else
+				this->inventory[i] = NULL;
 		}
 	}
 	return (*this);

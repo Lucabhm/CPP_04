@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 17:04:02 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/03 15:51:24 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 08:38:17 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class Brain
 		Brain(Brain const &cpy);
 		~Brain(void);
 		Brain	&operator= (Brain const &cpy);
-		void	setIdeas(std::string const &ideas);
 		void	printIdeas(void);
 };
 

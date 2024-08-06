@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:01 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/06 08:45:33 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 15:59:51 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Cat.hpp"
 #include "../include/Dog.hpp"
 
-int main()
+int main(void)
 {
 	Animal	*animals[6];
 

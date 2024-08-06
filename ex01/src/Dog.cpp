@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:18:59 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/06 08:53:15 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 15:37:17 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@ Dog::Dog(std::string type)
 Dog::Dog(Dog const &cpy)
 {
 	std::cout << "Dog copy Constructor called" << std::endl;
-	*this = cpy;
+	this->Animal::type = cpy.Animal::type;
+	this->type = cpy.type;
+	this->DogBrain = new Brain(*cpy.DogBrain);
 }
 
 // Destructor
@@ -52,6 +54,9 @@ Dog	&Dog::operator= (Dog const &cpy)
 	if (this != &cpy)
 	{
 		this->type = cpy.type;
+		if (this->DogBrain)
+			delete this->DogBrain;
+		this->DogBrain = new Brain(*cpy.DogBrain);
 	}
 	return (*this);
 }

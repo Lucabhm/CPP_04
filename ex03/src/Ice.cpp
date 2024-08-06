@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 10:37:24 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/05 21:50:38 by lucabohn         ###   ########.fr       */
+/*   Updated: 2024/08/06 16:47:03 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Ice	&Ice::operator= (Ice const &cpy)
 {
 	std::cout << "Ice copy assignment operator called" << std::endl;
 	if (this != &cpy)
-		std::cout << "Noting needs to copy" << std::endl;
+		this->AMateria::type = "ice";
 	return (*this);
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:05 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/06 08:40:18 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/06 14:45:35 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,6 @@ Animal::Animal(void)
 {
 	std::cout << "Animal default Constructor called" << std::endl;
 	this->type = "Animal";
-}
-
-Animal::Animal(std::string type)
-{
-	std::cout << "Animal Constructor with name attribute called" << std::endl;
-	this->type = type;
 }
 
 Animal::Animal(Animal const &cpy)
@@ -54,11 +48,6 @@ Animal	&Animal::operator= (Animal const &cpy)
 // Member functions
 
 std::string	Animal::getType(void) const {return (this->type);}
-
-void	Animal::setType(std::string type)
-{
-	this->type = type;
-}
 
 void	Animal::makeSound(void) const {}
 

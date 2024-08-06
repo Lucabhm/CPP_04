@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucabohn <lucabohn@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 11:35:04 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/05 21:35:33 by lucabohn         ###   ########.fr       */
+/*   Updated: 2024/08/06 17:23:53 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,13 @@ MateriaSource::MateriaSource(void)
 MateriaSource::MateriaSource(MateriaSource const &cpy)
 {
 	std::cout << "MateriaSource copy Constructor called" << std::endl;
-	*this = cpy;
+	for (int i = 0; i < 4; i++)
+	{
+		if (cpy.invertory[i])
+			this->invertory[i] = cpy.invertory[i]->clone();
+		else
+			this->invertory[i] = NULL;
+	}
 }
 
 // Destructor
@@ -51,8 +57,12 @@ MateriaSource	&MateriaSource::operator= (MateriaSource const &cpy)
 		for (int i = 0; i < 4; i++)
 		{
 			if (this->invertory[i])
+			{
 				delete this->invertory[i];
-			this->invertory[i] = cpy.invertory[i];
+				this->invertory[i] = cpy.invertory[i]->clone();
+			}
+			else
+				this->invertory[i] = NULL;
 		}
 	}
 	return (*this);
