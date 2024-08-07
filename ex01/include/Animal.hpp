@@ -6,7 +6,7 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:03 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/06 14:46:01 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/07 10:34:08 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Animal
 		std::string	getType(void) const;
 		virtual void	makeSound(void) const;
 		virtual void	printBrain(void) const;
+		virtual void	addIdea(std::string const &idea);
 };
 
 #endif

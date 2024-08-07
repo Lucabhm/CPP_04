@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:18:59 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/06 15:37:17 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/07 09:06:25 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Dog::Dog(void)
 	this->Animal::type = "Dog";
 	this->type = "Default";
 	this->DogBrain = new Brain;
+	this->pos = 3;
 }
 
 Dog::Dog(std::string type)
@@ -28,6 +29,7 @@ Dog::Dog(std::string type)
 	this->Animal::type = "Dog";
 	this->type = type;
 	this->DogBrain = new Brain;
+	this->pos = 3;
 }
 
 Dog::Dog(Dog const &cpy)
@@ -36,6 +38,7 @@ Dog::Dog(Dog const &cpy)
 	this->Animal::type = cpy.Animal::type;
 	this->type = cpy.type;
 	this->DogBrain = new Brain(*cpy.DogBrain);
+	this->pos = cpy.pos;
 }
 
 // Destructor
@@ -71,4 +74,13 @@ void	Dog::makeSound(void) const
 void	Dog::printBrain(void) const
 {
 	DogBrain->printIdeas();
+}
+
+void	Dog::addIdea(std::string const &idea)
+{
+	if (pos < 100)
+	{
+		DogBrain->addIdea(pos, idea);
+		pos++;
+	}
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 17:07:28 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/06 14:47:35 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/07 09:03:39 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,9 @@ void	Brain::printIdeas(void)
 			break ;
 		std::cout << "idea = " << ideas[i] << std::endl;
 	}
+}
+
+void	Brain::addIdea(int pos, std::string const &idea)
+{
+	ideas[pos] = idea;
 }

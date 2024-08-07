@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:09 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/06 15:35:27 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/07 09:05:46 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Cat::Cat(void)
 	this->Animal::type = "Cat";
 	this->type = "Default";
 	this->CatBrain = new Brain;
+	this->pos = 3;
 }
 
 Cat::Cat(std::string type)
@@ -28,6 +29,7 @@ Cat::Cat(std::string type)
 	this->Animal::type = "Cat";
 	this->type = type;
 	this->CatBrain = new Brain;
+	this->pos = 3;
 }
 
 Cat::Cat(Cat const &cpy)
@@ -36,6 +38,7 @@ Cat::Cat(Cat const &cpy)
 	this->Animal::type = cpy.Animal::type;
 	this->type = cpy.type;
 	this->CatBrain = new Brain(*cpy.CatBrain);
+	this->pos = cpy.pos;
 }
 
 // Destructor
@@ -72,4 +75,13 @@ void	Cat::makeSound(void) const
 void	Cat::printBrain(void) const
 {
 	CatBrain->printIdeas();
+}
+
+void	Cat::addIdea(std::string const &idea)
+{
+	if (pos < 100)
+	{
+		CatBrain->addIdea(pos, idea);
+		pos++;
+	}
 }

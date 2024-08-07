@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:01 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/06 15:59:51 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/07 09:09:50 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,33 @@ int main(void)
 		animals[i]->printBrain();
 	for (int i = 0; i < 6; i++)
 		delete	animals[i];
+
+	std::cout << std::endl;
+	std::cout << "Test for Cat deep copy" << std::endl << std::endl;
+
+	Cat	a("Gerry");
+	Cat	b("Fia");
+
+	a.addIdea("Hallo was geht ab");
+	b = a;
+	b.printBrain();
+	b.addIdea("Wtf");
+	a.printBrain();
+	b.printBrain();
+
+	std::cout << std::endl;
+	std::cout << "Test for Dog deep copy" << std::endl << std::endl;
+
+	{
+		Dog	a("Gerry");
+		Dog	b("Fia");
+
+		a.addIdea("Hallo was geht ab");
+		b = a;
+		b.printBrain();
+		b.addIdea("Wtf");
+		a.printBrain();
+		b.printBrain();
+	}
 	return (0);
 }

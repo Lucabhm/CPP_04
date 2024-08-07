@@ -6,7 +6,7 @@
 /*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:05 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/06 14:45:35 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/07 10:34:56 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,5 @@ void	Animal::printBrain(void) const
 {
 	std::cout << "Do nothing" << std::endl;
 }
+
+void	Animal::addIdea(std::string const &idea) {}

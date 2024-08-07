@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:03 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/06 16:01:32 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/07 09:03:15 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Animal
 		std::string	getType(void) const;
 		virtual void	makeSound(void) const = 0;
 		virtual void	printBrain(void) const = 0;
+		virtual void	addIdea(std::string const &idea) = 0;
 };
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbohm <lbohm@student.42heilbronn.de>       +#+  +:+       +#+        */
+/*   By: lbohm <lbohm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/30 15:19:12 by lbohm             #+#    #+#             */
-/*   Updated: 2024/08/06 08:46:41 by lbohm            ###   ########.fr       */
+/*   Updated: 2024/08/07 10:50:15 by lbohm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Dog: public Animal
 	private:
 		std::string	type;
 		Brain	*DogBrain;
+		int	pos;
 	public:
 		Dog(void);
 		Dog(std::string type);
@@ -29,6 +30,7 @@ class Dog: public Animal
 		Dog	&operator= (Dog const &cpy);
 		void	makeSound(void) const;
 		void	printBrain(void) const;
+		void	addIdea(std::string const &idea);
 };
 
 #endif
